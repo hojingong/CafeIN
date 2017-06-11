@@ -4,4 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="clickcolor">#6799FF</color>
+    <color name="OkBtn">#5e3400</color>
+    <color name="OkBtnClicked">#ebd2b3</color>
+    <color name="cancleBtn">#666666</color>
+    <color name="cancleBtnClicked">#bbbbbb</color>
 </resources>
