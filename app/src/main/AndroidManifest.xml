@@ -23,6 +23,7 @@
         <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAALBViAA1-3A9HNUb_qwUIEamPZ4Hamlg"/>
 
+        <activity android:name=".CafeInfoActivity"/>
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>

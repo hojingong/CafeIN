@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HCICafeIn.iml" filepath="$PROJECT_DIR$/HCICafeIn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HCI_CafeIn.iml" filepath="$PROJECT_DIR$/HCI_CafeIn.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

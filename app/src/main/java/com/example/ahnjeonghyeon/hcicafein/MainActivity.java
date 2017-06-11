@@ -1,8 +1,10 @@
 package com.example.ahnjeonghyeon.hcicafein;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
@@ -13,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -41,6 +44,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     ArrayList<Cafe> cafeList;
     Geocoder gc;
 
+    //
+    Button test;
+
+    CafeMenuDB dbhelper;
+    SQLiteDatabase datab;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +60,23 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     public void init(){
+        //호진: 마커 눌렀을때 눌린 마커 정보를 CafeInfoActivity로 보내주는 것
+        ////////////////////////////////
+        test = (Button)findViewById(R.id.testbtn);
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),CafeInfoActivity.class);
+                intent.putExtra("cafem","할리스");
+                intent.putExtra("cafead","서울특별시 광진구 화양동 00-1");
+                intent.putExtra("cafecall","02-0000-0000");
+                intent.putExtra("cafeimg","hollys");//메뉴출력위해 이미지도 같이 전달
+                startActivity(intent);
+            }
+        });
+        ///////////////////////////////
+
+        //
         search=(AutoCompleteTextView)findViewById(R.id.search_Text);
         autocomplete_List=new ArrayList<>();
         gc=new Geocoder(this);
